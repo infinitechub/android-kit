@@ -12,7 +12,7 @@ implementation 'com.github.infinitechub:android-kit:x.y.z'
 ```
 
 ### ActivityKit.kt
-ActivityKit has implementation of ActivityResult and Requesting dynamic permissions using ActivityResultContract. Extend activity with ActivityKit, To make good use of ActivityKit. 
+ActivityKit had base implementation of data binding forcing to use data binding instead of deprecated kotlin synthatic. 
 
 ```kotlin
 class MainActivity : ActivityKit<ActivityMainBinding>() {
@@ -23,6 +23,7 @@ class MainActivity : ActivityKit<ActivityMainBinding>() {
     }
 }
 ```
+ActivityKit has implementation of ActivityResult and Requesting dynamic permissions using `<ActivityResultContract>`. Extend activity with ActivityKit, To make good use of ActivityKit. 
 
 To ask single dynamic permission
 ```kotlin

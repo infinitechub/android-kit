@@ -9,11 +9,11 @@ fun Context.getColorResource(name: String): Int {
     return resources.getIdentifier(name, "color", packageName)
 }
 
-fun Context.getColor(name: String): Int {
+fun Context.getColorCompat(name: String): Int {
     return ContextCompat.getColor(this, getColorResource(name))
 }
 
-fun Context.getColor(res: Int): Int {
+fun Context.getColorCompat(res: Int): Int {
     return ContextCompat.getColor(this, res)
 }
 
@@ -21,7 +21,7 @@ fun Activity.getColorResource(name: String): Int {
     return resources.getIdentifier(name, "color", packageName)
 }
 
-fun Activity.getColor(name: String): Int {
+fun Activity.getColorCompat(name: String): Int {
     return ContextCompat.getColor(this, getColorResource(name))
 }
 
@@ -29,6 +29,6 @@ fun Fragment.getColorResource(name: String): Int {
     return requireContext().getColorResource(name)
 }
 
-fun Fragment.getColor(name: String): Int {
-    return requireContext().getColor(name)
+fun Fragment.getColorCompat(name: String): Int {
+    return requireContext().getColorCompat(name)
 }
