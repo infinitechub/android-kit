@@ -23,7 +23,7 @@ abstract class ViewModelKit : ViewModel() {
         emitUIState(UIStateException(exception = exception))
     }
 
-    protected val exceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->
+    protected open val exceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->
         emitError(Exception(throwable))
     }
 
